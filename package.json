@@ -1,0 +1,17 @@
+{
+  "name": "vk_downloader",
+  "version": "1.0.0",
+  "description": "feed wall post get all music",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Awpteamoose",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "fs-extended": "0.2.1",
+    "request": "2.79.0",
+    "sanitize-filename": "1.6.1"
+  }
+}
