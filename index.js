@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 
 var fs = require('fs-extended');
@@ -14,7 +15,7 @@ request(`https://api.vk.com/method/wall.getById?posts=${wallpost_id}`, (error, r
 			var audio = attach.audio;
 			var filename = sanitize(`${audio.artist} - ${audio.title}`, { "replacement": "~" });
 			console.log(filename);
-			filename = "out\\" + filename + ".mp3";
+			filename = filename + ".mp3";
 			fs.ensureFileSync(filename);
 			request(`${audio.url}`).pipe(fs.createWriteStream(filename));
 		});
